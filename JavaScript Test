@@ -1,0 +1,41 @@
+let n = 5;
+
+// Upper part (including middle row)
+for (let i = 1; i <= n; i++) {
+
+    // Spaces before star
+    for (let j = i; j < n; j++) {
+        process.stdout.write(" ");
+    }
+
+    // Stars and inner spaces
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        if (j === 1 || j === (2 * i - 1)) {
+            process.stdout.write("*");
+        } else {
+            process.stdout.write(" ");
+        }
+    }
+
+    console.log();
+}
+
+// Lower part
+for (let i = n - 1; i >= 1; i--) {
+
+    // Spaces before star
+    for (let j = n; j > i; j--) {
+        process.stdout.write(" ");
+    }
+
+    // Stars and inner spaces
+    for (let j = 1; j <= (2 * i - 1); j++) {
+        if (j === 1 || j === (2 * i - 1)) {
+            process.stdout.write("*");
+        } else {
+            process.stdout.write(" ");
+        }
+    }
+
+    console.log();
+}
